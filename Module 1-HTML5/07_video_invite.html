@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Video Invite</title>
+</head>
+
+<body>
+
+    <video width="400"
+           controls
+           oncanplay="videoReady()">
+
+        <source src="movie.mp4" type="video/mp4">
+
+    </video>
+
+    <p id="msg"></p>
+
+    <script>
+
+        function videoReady() {
+            document.getElementById("msg").innerHTML =
+                "Video Ready to Play";
+        }
+
+        window.onbeforeunload = function () {
+            return "Leave Page?";
+        }
+
+    </script>
+
+</body>
+</html>

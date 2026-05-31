@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Geolocation</title>
+</head>
+
+<body>
+
+    <button onclick="findLocation()">
+        Find Nearby Events
+    </button>
+
+    <p id="location"></p>
+
+    <script>
+
+        function findLocation() {
+
+            navigator.geolocation.getCurrentPosition(
+                showPosition,
+                showError,
+                {
+                    enableHighAccuracy: true,
+                    timeout: 5000
+                }
+            );
+        }
+
+        function showPosition(position) {
+
+            document.getElementById("location").innerHTML =
+                "Latitude: " +
+                position.coords.latitude +
+                "<br>Longitude: " +
+                position.coords.longitude;
+        }
+
+        function showError(error) {
+
+            alert("Location Access Denied");
+        }
+
+    </script>
+
+</body>
+</html>

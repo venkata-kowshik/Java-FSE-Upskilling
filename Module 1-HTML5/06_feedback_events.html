@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feedback Events</title>
+</head>
+
+<body>
+
+    Phone:
+    <input type="text" onblur="checkPhone()">
+
+    <br><br>
+
+    Select Event:
+    <select onchange="showFee(this.value)">
+        <option value="">Choose</option>
+        <option value="500">Music</option>
+        <option value="1000">Sports</option>
+    </select>
+
+    <p id="fee"></p>
+
+    <img src="https://via.placeholder.com/100"
+         ondblclick="bigImage(this)">
+
+    <br><br>
+
+    <textarea onkeyup="countChars(this)"></textarea>
+
+    <p id="count"></p>
+
+    <button onclick="submitMsg()">Submit</button>
+
+    <script>
+
+        function checkPhone() {
+            alert("Phone Checked");
+        }
+
+        function showFee(value) {
+            document.getElementById("fee").innerHTML =
+                "Fee: " + value;
+        }
+
+        function submitMsg() {
+            alert("Feedback Submitted");
+        }
+
+        function bigImage(img) {
+            img.style.width = "300px";
+        }
+
+        function countChars(data) {
+            document.getElementById("count").innerHTML =
+                data.value.length;
+        }
+
+    </script>
+
+</body>
+</html>
