@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Responsive Design</title>
+
+    <style>
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            img {
+                width: 100px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+
+    </nav>
+
+    <h1>Community Portal</h1>
+
+    <img src="https://via.placeholder.com/300">
+
+</body>
+</html>
